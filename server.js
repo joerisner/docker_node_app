@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-let userGoal = 'Learn Docker!';
+let userVal = 'Get Good';
 
 app.use(
   bodyParser.urlencoded({
@@ -21,15 +21,15 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <section>
-          <h2>My Course Goal</h2>
-          <h3>${userGoal}</h3>
+          <h2>Docker Noob</h2>
+          <h3>${userVal}</h3>
         </section>
         <form action="/store-goal" method="POST">
           <div class="form-control">
-            <label>Course Goal</label>
-            <input type="text" name="goal">
+            <label>Enter Something:</label>
+            <input type="text" name="val">
           </div>
-          <button>Set Course Goal</button>
+          <button>Set Goal</button>
         </form>
       </body>
     </html>
@@ -37,9 +37,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/store-goal', (req, res) => {
-  const enteredGoal = req.body.goal;
-  console.log(enteredGoal);
-  userGoal = enteredGoal;
+  const enteredVal = req.body.val;
+  console.log(enteredVal);
+  userVal = enteredVal;
   res.redirect('/');
 });
 
