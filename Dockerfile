@@ -2,9 +2,11 @@ FROM node
 
 WORKDIR /node_app
 
-COPY . ./
+COPY package.json ./
 
 RUN npm install
+
+COPY . ./
 
 EXPOSE 80
 
