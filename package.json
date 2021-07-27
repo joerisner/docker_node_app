@@ -1,9 +1,9 @@
 {
-  "name": "docker-complete",
+  "name": "basic_docker_node",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "author": "Maximilian Schwarzmüller / Academind GmbH",
+  "author": "Joe Risner",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
