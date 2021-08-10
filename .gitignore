@@ -1,2 +1,5 @@
 # Mac config files
 .DS_Store
+
+# Secrets
+/.secrets
